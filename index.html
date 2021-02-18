@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="text-center">Welcome To Blue Bank</h1>
     <div id="login-area">
-            <h1 class="text-center">Welcome To Blue Bank</h1>
             <div class="submit-area">
                 <h4>Login</h4>
                 <input type="text" class="form-control" placeholder="Enter your name">
@@ -20,9 +20,19 @@
                 <button id="login" class="btn btn-success" >Enter</button>
             </div>
     </div>
+    <div id="transcation-area">
+        <h1>Transcation Area</h1>
+    </div>
 
     <script>
-
+        const loginBtn = document.getElementById('login');
+        loginBtn.addEventListener('mouseleave', function(){
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+            const transcationArea = document.getElementById("transcation-area");
+            transcationArea.style.display = "block";
+            
+        })
     </script>
 </body>
 </html>
